@@ -1,0 +1,21 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Mis Finanzas</title><meta name="theme-color" content="#F6F3EC">
+<meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Mis Finanzas"><meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="manifest" href="manifest.json"><link rel="icon" href="icon.svg"><link rel="apple-touch-icon" id="ati" href="icon.svg">
+<style>html,body{margin:0;height:100%;background:#F6F3EC;overflow:hidden;font-family:system-ui,sans-serif}
+iframe{position:fixed;top:0;left:0;width:100vw;height:100vh;height:100dvh;border:0}
+#ent{display:none;position:fixed;inset:0;background:#F6F3EC;align-items:center;justify-content:center;padding:24px;text-align:center}
+#ent div{background:#fff;border-radius:18px;padding:26px;max-width:360px;box-shadow:0 6px 24px rgba(0,0,0,.08)}
+#ent a{display:block;background:#0F5C4D;color:#fff;text-decoration:none;padding:14px;border-radius:12px;font-weight:700;margin-top:16px}</style></head>
+<body><iframe id="app" allow="clipboard-write; microphone"></iframe>
+<div id="ent"><div><div style="font-size:40px">💰</div><h2 style="margin:8px 0;color:#0F5C4D">Mis Finanzas</h2>
+<p style="color:#555">Para empezar, entra con tu cuenta de Google y da los permisos (solo la primera vez). Luego vuelve a abrir este link.</p>
+<a id="go" target="_top">Entrar con Google</a></div></div>
+<script>
+var E='https://script.google.com/macros/s/AKfycbzUEfIw8xesuI3ifjNuhUdAyWu5-QflDnxzdXKZJJO-LqHLXiYI_EtX5r4p9yo-Y5SQ1w/exec',q=location.search||'';document.getElementById('app').src=E+q;document.getElementById('go').href=E+q;
+var ok=0;addEventListener('message',function(e){if(e.data==='mf-ok'){ok=1;document.getElementById('ent').style.display='none'}});
+setTimeout(function(){if(!ok)document.getElementById('ent').style.display='flex'},12000);
+try{var c=document.createElement('canvas');c.width=c.height=180;var g=c.getContext('2d');g.fillStyle='#0F5C4D';g.fillRect(0,0,180,180);g.fillStyle='#fff';g.font='bold 78px sans-serif';g.textAlign='center';g.textBaseline='middle';g.fillText('S/',90,96);document.getElementById('ati').href=c.toDataURL('image/png')}catch(e){}
+</script></body></html>
